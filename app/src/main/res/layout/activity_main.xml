@@ -12,7 +12,7 @@
         android:layout_height="63dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="208dp"
-        android:digits="SABCDEFN"
+        android:digits="0123456789."
         android:inputType="text" />
 
     <Button
