@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity
 
 
      TextView text;
-     char operator;
+     int operator;
      double num=0;
      double result=0;
     @Override
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity
          Button button_divide;
          Button button_decimal;
          Button button_clear;
+         Button button_equals;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text=findViewById(R.id.text);
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity
         button_minus=findViewById(R.id.button_minus);
         button_divide=findViewById(R.id.button_divide);
         button_multiply=findViewById(R.id.button_multiply);
-
+        button_equals=findViewById(R.id.button_equals);
         button_clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,6 +137,70 @@ public class MainActivity extends AppCompatActivity
                     text.setText(String.valueOf(num));
                 }
         );
+        button_plus.setOnClickListener((View v)->
+        {
+            result+=num;
+            String a=String.valueOf(result);
+            num=0;
+            text.setText(a+"+");
+            operator=1;
+        });
+        button_minus.setOnClickListener((View v)->
+        {
+            result+=num;
+            String a=String.valueOf(result);
+            num=0;
+            text.setText(a+"-");
+            operator=2;
+        });
+        button_multiply.setOnClickListener((View v)->
+        {
+            result+=num;
+            String a=String.valueOf(result);
+            num=0;
+            text.setText(a+"*");
+            operator=3;
+        });
+        button_divide.setOnClickListener((View v)->
+        {
+            result+=num;
+            String a=String.valueOf(result);
+            num=0;
+            text.setText(a+"/");
+            operator=4;
+        });
 
+        button_equals.setOnClickListener((View v)->
+        {
+            if(operator==1){
+                    result+=num;
+                    String x=String.valueOf(result);
+                    num=0;
+                    text.setText(x);
+                    operator=0;}
+            else if(operator==2){
+                result-=num;
+                String x=String.valueOf(result);
+                num=0;
+                text.setText(x);
+                operator=0;
+            }
+            else if(operator==3)
+            {
+                result*=num;
+                String x=String.valueOf(result);
+                num=0;
+                text.setText(x);
+                operator=0;
+            }
+            else if(operator==4)
+            {
+                result/=num;
+                String x=String.valueOf(result);
+                num=0;
+                text.setText(x);
+                operator=0;
+            }
+        });
     }
 }

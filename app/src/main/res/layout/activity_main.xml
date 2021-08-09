@@ -157,4 +157,10 @@
         android:layout_margin="5dp"
         android:text="/" />
 
+    <Button
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_0"
+        android:text="="
+        android:id="@+id/button_equals"/>
 </RelativeLayout>
