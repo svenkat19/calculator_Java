@@ -7,13 +7,14 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/text"
+       android:id="@+id/text"
         android:layout_width="233dp"
         android:layout_height="63dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="208dp"
-        android:digits="0123456789."
-        android:inputType="text" />
+        android:text="0"
+        android:textSize="25dp"
+         />
 
     <Button
         android:id="@+id/button_1"
