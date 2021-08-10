@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity
      int operator;
      double num=0;
      double result=0;
+     int decimalOn=0;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
          Button button_1;
@@ -33,7 +35,6 @@ public class MainActivity extends AppCompatActivity
          Button button_minus;
          Button button_multiply;
          Button button_divide;
-         Button button_decimal;
          Button button_clear;
          Button button_equals;
         super.onCreate(savedInstanceState);
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity
         button_8=findViewById(R.id.button_8);
         button_9=findViewById(R.id.button_9);
         button_0=findViewById(R.id.button_0);
-        button_decimal=findViewById(R.id.button_decimal);
         button_clear=findViewById(R.id.button_clear);
         button_plus=findViewById(R.id.button_plus);
         button_minus=findViewById(R.id.button_minus);
@@ -75,11 +75,14 @@ public class MainActivity extends AppCompatActivity
                                     });
         button_1.setOnClickListener((View v)->{
 
+
                     num=num*10;
                     num+=1;
-                    String s=String.valueOf(num);
-                    text.setText(s);
+
+            String s=String.valueOf(num);
+            text.setText(s);
                 }
+
         );
         button_2.setOnClickListener((View v)->{
 

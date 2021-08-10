@@ -122,19 +122,19 @@
         android:layout_margin="5dp"
         android:text="X" />
     <Button
-        android:id="@+id/button_decimal"
+        android:id="@+id/button_equals"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_centerVertical="true"
         android:layout_below="@id/button_7"
         android:layout_margin="5dp"
-        android:text="." />
+        android:text="=" />
     <Button
         android:id="@+id/button_0"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@id/button_decimal"
+        android:layout_toRightOf="@id/button_equals"
         android:layout_below="@id/button_8"
         android:layout_margin="5dp"
         android:text="0" />
@@ -157,10 +157,5 @@
         android:layout_margin="5dp"
         android:text="/" />
 
-    <Button
-        android:layout_width="385dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_0"
-        android:text="="
-        android:id="@+id/button_equals"/>
+
 </RelativeLayout>
