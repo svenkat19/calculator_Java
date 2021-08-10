@@ -65,8 +65,7 @@ public class MainActivity extends AppCompatActivity
         button_0.setOnClickListener((View v)-> {
 
                                             num = num * 10;
-                                            num+=0;
-                                            text.setText(text.getText()+String.valueOf(num));
+                                            text.setText(String.valueOf(num));
 
                                     }
                                     );
