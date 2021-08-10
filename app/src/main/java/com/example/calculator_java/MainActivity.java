@@ -6,7 +6,6 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
@@ -17,7 +16,6 @@ public class MainActivity extends AppCompatActivity
      int operator;
      double num=0;
      double result=0;
-     int decimalOn=0;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,15 +62,14 @@ public class MainActivity extends AppCompatActivity
                 num=0;
             }
         }) ;
-        button_0.setOnClickListener(new View.OnClickListener() {
-                                        @SuppressLint("SetTextI18n")
-                                        @Override
-                                        public void onClick(View v) {
+        button_0.setOnClickListener((View v)-> {
+
                                             num = num * 10;
                                             num+=0;
                                             text.setText(text.getText()+String.valueOf(num));
-                                        }
-                                    });
+
+                                    }
+                                    );
         button_1.setOnClickListener((View v)->{
 
 
@@ -142,35 +139,39 @@ public class MainActivity extends AppCompatActivity
         );
         button_plus.setOnClickListener((View v)->
         {
+           if(operator==0){
             result+=num;
             String a=String.valueOf(result);
             num=0;
             text.setText(a+"+");
-            operator=1;
+            operator=1;}
         });
         button_minus.setOnClickListener((View v)->
         {
+            if(operator==0){
             result+=num;
             String a=String.valueOf(result);
             num=0;
             text.setText(a+"-");
-            operator=2;
+            operator=2;}
         });
         button_multiply.setOnClickListener((View v)->
         {
+            if(operator==0){
             result+=num;
             String a=String.valueOf(result);
             num=0;
             text.setText(a+"*");
-            operator=3;
+            operator=3;}
         });
         button_divide.setOnClickListener((View v)->
         {
+            if(operator==0){
             result+=num;
             String a=String.valueOf(result);
             num=0;
             text.setText(a+"/");
-            operator=4;
+            operator=4;}
         });
 
         button_equals.setOnClickListener((View v)->
